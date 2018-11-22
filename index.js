@@ -2,8 +2,10 @@ var WebSocketServer = new require('ws');
 
 var clients = {};
 
+var port = process.env.PORT || 3001;
+
 var webSocketServer = new WebSocketServer.Server({
-	port: 3001
+	port: port
 });
 webSocketServer.on('connection', function(ws) {
 
